@@ -3,8 +3,18 @@
 <p>Hi <%= @user.name %>,</p>
 
 <p>
+This is html
+</p>
+
+<p>
 Welcome to the Sample App! Click on the link below to activate your account:
+</p>
+
+<p>
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
 </p>
 
 <%= link_to "Activate", edit_account_activation_url(@user.activation_token,
                                                     email: @user.email) %>
+
+
